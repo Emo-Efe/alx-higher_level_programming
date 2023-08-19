@@ -2,9 +2,15 @@
 """function that computes the square value of all integers of a matrix."""
 
 
+# Emo-Efe on the code
+
+# create our special func
 def square_matrix_simple(matrix=[]):
-    matrix_new = [row[:] for row in matrix]
-    for idx, row in enumerate(matrix_new):
-        for idx2, col in enumerate(matrix_new):
-            matrix_new[idx][idx2] = row[idx2] ** 2
-    return matrix_new
+    # making use of the new func
+    matrix_new = matrix.copy()
+# a for loop
+    for i in range(len(matrix)):
+        matrix_new[i] = list(map(lambda x: x**2, matrix[i]))
+
+# now return statement
+    return (matrix_new)
